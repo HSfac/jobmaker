@@ -1,0 +1,121 @@
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: width 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar.closed {
+  width: 80px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.logo span {
+  margin-left: 10px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.menu li a, .menu-item {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  padding: px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: background-color 0.3s;
+}
+
+.menu li a:hover, .menu-item:hover {
+  background-color: #34495e;
+}
+
+.menu-item {
+  cursor: pointer;
+}
+
+.menu li span {
+  margin-left: 10px;
+}
+
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 20px;
+}
+
+.submenu li {
+  margin: 5px 0;
+}
+
+.submenu li a {
+  padding-left: 30px; /* Indentation for submenu items */
+}
+
+.user-info {
+  margin-top: auto;
+}
+
+.username {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.email {
+  margin-bottom: 10px;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-btn, .logout-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #34495e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.settings-btn:hover, .logout-btn:hover {
+  background-color: #3d566e;
+}
+
+.settings-btn span, .logout-btn span {
+  margin-left: 10px;
+}

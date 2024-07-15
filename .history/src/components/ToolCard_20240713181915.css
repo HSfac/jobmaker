@@ -1,0 +1,58 @@
+.tool-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #d1f4d1;
+  color: #4caf50;
+  border-radius: 12px;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.content {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.header {
+  display: flex;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  margin-left: -10px;
+}
+
+h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+
+p {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #666;
+}

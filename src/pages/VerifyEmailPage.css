@@ -1,0 +1,27 @@
+.verify-email-page {
+  width: 350px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.verify-email-page h1 {
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.verify-email-page button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.verify-email-page p {
+  margin-top: 20px;
+}

@@ -1,0 +1,418 @@
+/* LandingPage.css */
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../assets/fonts/Pretendard-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../assets/fonts/Pretendard-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+:root {
+  --bg-color: #f0f4ff;
+  --text-color: #333;
+  --primary-color: #3a73e1;
+  --secondary-color: #fff;
+  --question-bg-color: #4a90e2;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --primary-color: #bb86fc;
+  --secondary-color: #333;
+  --question-bg-color: #3700b3;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  font-family: 'Pretendard', sans-serif;
+}
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+}
+
+.hero-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.hero-text h1 {
+  font-size: 4em; /* Increased font size */
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 600; /* SemiBold */
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 400; /* Regular */
+}
+
+.hero-text button.primary {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.hero-text button.primary:hover {
+  border: 2px solid var(--primary-color);
+}
+
+.hero-images {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-images img {
+  max-width: 100%;
+  height: auto;
+}
+
+.second-section {
+  width: 100%;
+  font-size: 1.5em;
+  padding: 50px 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  font-weight: 700; /* SemiBold */
+}
+
+.second-section h2 {
+  color: var(--primary-color);
+  font-size: 1.5em;
+  font-weight: 700; /* SemiBold */
+}
+
+.sliding-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 280px; /* Adjust as needed */
+  position: relative;
+}
+
+.sliding-images img {
+  width: 300%; /* Make the images smaller */
+  position: absolute;
+  animation-duration: 30s; /* Slow down the animation */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.sliding-images img:nth-child(1) {
+  top: 0;
+  left: -100%;
+  animation-name: slide-in-left;
+}
+
+.sliding-images img:nth-child(2) {
+  top: 50%;
+  left: 100%;
+  animation-name: slide-in-right;
+}
+
+@keyframes slide-in-left {
+  0%, 100% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+}
+
+@keyframes slide-in-right {
+  0%, 100% {
+    left: 100%;
+  }
+  50% {
+    left: -100%;
+  }
+}
+
+.generators {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.generator-card {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.generator-card:hover {
+  transform: scale(1.05);
+}
+
+.generator-card h3 {
+  margin-top: 0;
+}
+
+.generator-card p {
+  margin: 10px 0 0;
+}
+
+/* 기존 CSS 생략 */
+
+.third-section {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+
+}
+
+.third-section h2 {
+  font-size: 2.2em;
+  color: var(--primary-color);
+  font-weight: 700; /* SemiBold */
+}
+
+.third-section h3 {
+  font-size: 1em;
+  font-weight: 600; /* SemiBold */
+}
+
+.example-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  flex-direction: column; /* 세로로 배치 */
+}
+
+.example-image.left {
+  align-self: flex-start;
+  margin: 0 50px; /* 이미지 양옆 여백 설정 */
+  animation: slide-left 5s infinite;
+}
+
+.example-image.center1 {
+  align-self: center;
+  margin: 0 50px; /* 이미지 양옆 여백 설정 */
+}
+
+.example-image.right {
+  align-self: flex-end;
+  margin: 0 50px; /* 이미지 양옆 여백 설정 */
+  animation: slide-right 5s infinite;
+}
+
+.example-image.center2 {
+  align-self: center;
+  margin: 0 50px; /* 이미지 양옆 여백 설정 */
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-20px); /* 원하는 슬라이드 거리 설정 */
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px); /* 원하는 슬라이드 거리 설정 */
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* 기존 CSS 생략 */
+
+
+
+
+.fourth-section {
+  width: 100%;
+  padding: 50px 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+}
+
+.fourth-section h2 {
+  font-size: 2.2em;
+  color: var(--primary-color);
+  font-weight: 700; /* SemiBold */
+  margin-bottom: 10px;
+}
+
+.fourth-section h3 {
+  font-size: 26px;
+  font-weight: 700; /* SemiBold */
+  margin-bottom: 30px;
+}
+
+.sliding-tags {
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.tags-wrapper {
+  display: inline-block;
+  animation: slide 45s linear infinite;
+  
+}
+
+.tag {
+  font-size: 20px;
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 20px 40px;
+  margin: 0 10px;
+  border-radius: 500px;
+  font-weight: 600; /* SemiBold */
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.fifth-section {
+  width: 100%;
+  padding: 50px 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+}
+
+.fifth-section h2 {
+  margin-top: 70px;
+  font-size: 2.2em;
+  color: var(--primary-color);
+  font-weight: 700; /* SemiBold */
+}
+
+.fifth-section h3 {
+  font-size: 26px;
+  font-weight: 700; /* SemiBold */
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.pricing-plans {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 200px;
+}
+
+.plan {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  width: 250px;
+  text-align: center;
+}
+
+.plan h3 {
+  margin-top: 0;
+}
+
+.plan p {
+  font-size: 20px;
+  font-weight: 700; /* SemiBold */
+}
+
+.plan ul {
+  list-style: none;
+  padding: 0;
+}
+
+.plan ul li {
+  margin: 10px 0;
+}
+
+.plan button.primary {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 10px 20px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.plan button.primary:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.footer {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
+}
